@@ -11,6 +11,7 @@ FRONTENDBIN=$(FRONTENDBASE)/node_modules/.bin
 
 all: help
 
+install: go-get frontend-install
 publish: compile-backend compile-frontend start-backend
 stop: stop-watching stop-remote-control stop-backend
 
@@ -98,6 +99,10 @@ start-remote-control: stop-remote-control
 stop-remote-control:
 	@touch /tmp/$(PROJECTNAME)-remote-control.pid
 	@-kill `cat /tmp/$(PROJECTNAME)-remote-control.pid` 2> /dev/null || true
+
+frontend-install:
+	@echo "  >  Downloading dependencies from NPM."
+	@cd frontend && npm install
 
 help:
 	@cat docs/man | less

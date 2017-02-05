@@ -12,6 +12,7 @@ const REMOTE_CONTROL_URL = "http://localhost:9966"
 var (
 	log             = logger.New("preact")
 	developmentMode = len(os.Getenv("DEVELOP")) > 0
+	cache           = NewCache()
 )
 
 func SendRemoteCommand(cmd string) {

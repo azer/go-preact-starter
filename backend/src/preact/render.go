@@ -18,6 +18,10 @@ func RenderContent(c echo.Context) (string, error) {
 }
 
 func RenderPage(c echo.Context, options *RoutingOptions) error {
+	if html, ok := cache.Get(c.Request().URL.Path); ok {
+		return c.HTML(http.StatusOK, html)
+	}
+
 	content, err := RenderContent(c)
 	if err != nil {
 		return err
@@ -37,6 +41,10 @@ func RenderPage(c echo.Context, options *RoutingOptions) error {
 	if err != nil {
 		log.Error("Failed to execute template. %v", err)
 		return err
+	}
+
+	if !developmentMode {
+		cache.Set(c.Request().URL.Path, doc.String())
 	}
 
 	return c.HTML(http.StatusOK, doc.String())
