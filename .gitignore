@@ -1,0 +1,8 @@
+node_modules
+.DS_Store
+npm-debug.log
+public/dist.js
+public/dist.css
+backend/vendor
+backend/pkg
+backend/bin

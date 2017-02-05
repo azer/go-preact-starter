@@ -1,0 +1,7 @@
+{
+  "/": {
+    "template": "index.html",
+    "component": "homepage",
+    "title": "It Works!"
+  }
+}

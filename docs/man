@@ -1,0 +1,31 @@
+
+    USAGE
+
+      make <command>
+
+    GENERAL COMMANDS
+
+      publish
+      develop
+      stop
+      watch
+      stop-watching
+
+    BACKEND COMMANDS
+
+      compile-backend
+      start-backend
+      stop-backend
+
+      go-get
+      go-install
+      go-build
+      go-run
+      go-clean
+
+   FRONT-END COMMANDS
+
+      compile-frontend
+      clean-frontend
+      start-remote-control
+      stop-remote-control
