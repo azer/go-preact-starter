@@ -29,3 +29,8 @@ make develop # start developing! visit localhost:9000 to see your website!
 * Define your routes on `routes.json`, point them to a valid component.
 * Run `make go-get` and `make frontend-install` to install new dependencies.
 * Edit .env file to choose different host/port for serving.
+
+### What's missing ?
+
+* API polyfill for backend
+* Could be nice to see backend errors on the browser. 
