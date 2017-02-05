@@ -10,6 +10,7 @@ Starter for combining Go and [Preact](https://github.com/developit/preact) in an
 * Uses Browserify, no configuration needed.
 * Supports server-side templating for HTML documents that wraps the application. So you can have multiple pages.
 * Locates all Go dependencies inside the project for security by giving you a convenient GOPATH setup.
+* Provides caching when development mode is disabled.
 
 ### Install
 
@@ -27,3 +28,4 @@ make develop # start developing! visit localhost:9000 to see your website!
 * Create UI components under frontend/components
 * Define your routes on `routes.json`, point them to a valid component.
 * Run `make go-get` and `make frontend-install` to install new dependencies.
+* Edit .env file to choose different host/port for serving.
