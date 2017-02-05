@@ -19,7 +19,7 @@ Clone the repo and install the dependencies:
 git clone git@github.com:azer/go-preact-starter.git hello-world
 cd hello-world
 make install # install dependencies needed
-make develop # start developing!
+make develop # start developing! visit localhost:9000 to see your website!
 ```
 
 ### Coding Notes
